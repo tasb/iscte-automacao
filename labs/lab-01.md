@@ -268,7 +268,7 @@ servidor-0 | CHANGED => {
 Run the following command to list `/tmp` folder on all nodes:
 
 ```bash
-ansible all -m ansible.builtin.shell -a "ls /tmp"
+ansible -i ./ansible/inventory all -m ansible.builtin.shell -a "ls /tmp"
 ```
 
 You should see output similar to the following:
@@ -282,7 +282,7 @@ hello.txt
 Let's check if the file was copied correctly:
 
 ```bash
-ansible all -m ansible.builtin.shell -a "cat /tmp/hello.txt"
+ansible -i ./ansible/inventory all -m ansible.builtin.shell -a "cat /tmp/hello.txt"
 ```
 
 You should see output similar to the following:
@@ -299,13 +299,13 @@ Next, let's run an ad-hoc command to install a package on the managed node.
 Run the following command:
 
 ```bash
-ansible -i ./ansible/inventory managed-node -m apt -a "name=nginx state=present" --become
+ansible -i ./ansible/inventory nodes -m apt -a "name=nginx state=present" --become
 ```
 
 After install the package, you can run the following command to verify the status of the `nginx` service:
 
 ```bash
-ansible -i ./ansible/inventory managed-node -m service -a "name=nginx state=started" --become
+ansible -i ./ansible/inventory nodes -m service -a "name=nginx state=started" --become
 ```
 
 And you can use a web browser to access the default web page of the `nginx` service by entering the IP address of the managed node in the address bar.
