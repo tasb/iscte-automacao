@@ -161,6 +161,8 @@ Run the following command to copy the public key to the managed node:
 ssh-copy-id -i ./ansible-key ansible@<managed-node-ip>
 ```
 
+Please replace `<managed-node-ip>` with the IP address of the managed node.
+
 You will need to enter the password for the `ansible` user on the managed node.
 
 Finally you need to test the connection between the control node and the managed node.
@@ -171,6 +173,8 @@ Run the following command to test the connection:
 ssh -i ./ansible-key ansible@<managed-node-ip>
 ```
 
+Please replace `<managed-node-ip>` with the IP address of the managed node.
+
 You should be able to login to the managed node without entering the password.
 
 ### Step 06: Create an inventory file for the managed node
@@ -180,8 +184,8 @@ Create a folder named `ansible` in the home directory of the `lab-admin` user on
 Create a file named `inventory` inside the `ansible` folder with the following content:
 
 ```yaml
-hosts:
-  managed-node:
+nodes:
+  hosts:
     ansible_host: <managed-node-ip>
     ansible_user: ansible
     ansible_ssh_private_key_file: /home/lab-admin/ansible-key
