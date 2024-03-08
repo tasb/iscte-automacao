@@ -1,0 +1,15 @@
+ungrouped:
+webserver:
+  hosts:
+    tiberna-azure-001:
+      ansible_host: 4.180.157.199
+      ansible_user: azureuser
+      ansible_ssh_private_key_file: /Users/tiago.bernardo/ssh-keys/azureuser.pem
+nodes:
+  hosts:
+    tiberna-azure-001:
+    tiberna-azure-002:
+      ansible_host: 4.180.159.23
+      ansible_user: azureuser
+      ansible_ssh_private_key_file: /Users/tiago.bernardo/ssh-keys/azureuser002.pem
+
