@@ -155,6 +155,18 @@ You need to enter a passphrase for the SSH key pair. You can leave it empty if y
 
 Now you need to copy the public key to the managed node.
 
+First, connect to the server using username and password:
+
+```bash
+ssh ansible@<managed-node-ip>
+```
+
+Please replace `<managed-node-ip>` with the IP address of the managed node.
+
+You will need to enter the password for the `ansible` user on the managed node.
+
+You should connect to the managed node. Now you can leave the session by typing `exit`.
+
 Run the following command to copy the public key to the managed node:
 
 ```bash
@@ -190,6 +202,7 @@ nodes:
     ansible_user: ansible
     ansible_ssh_private_key_file: /home/lab-admin/ansible-key
 ```
+
 Please replace `<managed-node-ip>` with the IP address of the managed node.
 
 This inventory file contains the details of the managed node, which is required by Ansible to connect to the managed node.
