@@ -241,7 +241,7 @@ echo "Hello World" > /tmp/hello.txt
 Then, run the following command to copy the previous created file to `/tmp` on all nodes:
 
 ```bash
-ansible all -m ansible.builtin.copy -a "src=/tmp/hello.txt dest=/tmp/"
+ansible -i ./ansible/inventory all -m ansible.builtin.copy -a "src=/tmp/hello.txt dest=/tmp/"
 ```
 
 You should see output similar to the following:
