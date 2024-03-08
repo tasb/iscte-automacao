@@ -198,9 +198,10 @@ Create a file named `inventory` inside the `ansible` folder with the following c
 ```yaml
 nodes:
   hosts:
-    ansible_host: <managed-node-ip>
-    ansible_user: ansible
-    ansible_ssh_private_key_file: /home/lab-admin/ansible-key
+    managed-node:
+      ansible_host: <managed-node-ip>
+      ansible_user: ansible
+      ansible_ssh_private_key_file: /home/lab-admin/ansible-key
 ```
 
 Please replace `<managed-node-ip>` with the IP address of the managed node.
