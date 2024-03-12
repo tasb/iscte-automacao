@@ -55,7 +55,7 @@ In this step, you will add two server hosted in Azure to your inventory file.
 
 To allow you to login on those servers you need the SSH private key file used to create the VMs.
 
-Donwload this ZIP file: [SSH Keys](https://iscteiul365.sharepoint.com/:u:/s/TClass_UpSk_AdministracaoSistemas/EUONE2H8n8hEotyhYCM0JG4BkFjcntIS5CGPVshdBdch5A?e=XYLoo1).
+Download this ZIP file: [SSH Keys](https://iscteiul365.sharepoint.com/:u:/s/TClass_UpSk_AdministracaoSistemas/EUONE2H8n8hEotyhYCM0JG4BkFjcntIS5CGPVshdBdch5A?e=XYLoo1).
 
 This zip file is password protected and the password will be shared during the session.
 
