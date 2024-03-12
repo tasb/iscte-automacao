@@ -4,6 +4,18 @@
 
 - [Objective](#objective)
 - [Prerequisites](#prerequisites)
+- [Guide](#guide)
+  - [Step 1: Create the Inventory File](#step-1-create-the-inventory-file)
+  - [Step 2: Add Servers to the Inventory File](#step-2-add-servers-to-the-inventory-file)
+  - [Step 3: Test Connectivity](#step-3-test-connectivity)
+  - [Step 4: Review your Inventory](#step-4-review-your-inventory)
+  - [Step 5: Add a last group to the inventory](#step-5-add-a-last-group-to-the-inventory)
+  - [Step 6: Run a Simple Ansible Command](#step-6-run-a-simple-ansible-command)
+  - [Step 7: Create Group Variables](#step-7-create-group-variables)
+  - [Step 8: Test Group Variables](#step-8-test-group-variables)
+  - [Step 9: Add host variables](#step-9-add-host-variables)
+  - [Step 10: Test Host Variables](#step-10-test-host-variables)
+- [Conclusion](#conclusion)
 
 ## Objective
 

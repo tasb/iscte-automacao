@@ -5,7 +5,6 @@ This repository contains materials for the Ansible and Git training.
 ## Table of Contents
 
 - [Introduction](#introduction)
-- [Getting Started](#getting-started)
 - [Topics Covered](#topics-covered)
 - [Contributing](#contributing)
 - [License](#license)
@@ -13,15 +12,6 @@ This repository contains materials for the Ansible and Git training.
 ## Introduction
 
 This training is designed to provide an introduction to Ansible and Git. It covers the basics of both tools and provides hands-on exercises to reinforce the concepts learned.
-
-## Getting Started
-
-To get started with this training, follow these steps:
-
-1. Clone this repository to your local machine.
-2. Install Ansible and Git if you haven't already.
-3. Navigate to the repository directory.
-4. Follow the instructions in the training materials to complete the exercises.
 
 ## Topics Covered
 
@@ -33,6 +23,13 @@ The training covers the following topics:
 - Git Basics
 - Branching and Merging
 - Collaborating with Git
+
+## Lab Exercises
+
+The training includes the following lab exercises:
+
+- [Lab 01 - Introduction to Ansible](labs/lab-01.md)
+- [Lab 02 - Static Inventory with Group Variables](labs/lab-02.md)
 
 ## Contributing
 
