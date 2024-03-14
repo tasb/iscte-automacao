@@ -55,7 +55,7 @@ In this step, you will add two server hosted in Azure to your inventory file.
 
 To allow you to login on those servers you need the SSH private key file used to create the VMs.
 
-Download this ZIP file: [SSH Keys](https://iscteiul365.sharepoint.com/:u:/s/TClass_UpSk_AdministracaoSistemas/EUONE2H8n8hEotyhYCM0JG4BkFjcntIS5CGPVshdBdch5A?e=XYLoo1).
+Download this ZIP file: [SSH Keys](https://iscteiul365.sharepoint.com/:u:/s/TClass_UpSk_AdministracaoSistemas/EUONE2H8n8hEotyhYCM0JG4BkFjcntIS5CGPVshdch5A?e=XYLoo1).
 
 This zip file is password protected and the password will be shared during the session.
 
@@ -119,7 +119,7 @@ On this option, you see clearly the automatic groups created by Ansible: `all`, 
 Edit the `inventory.yml` file and add the following content:
 
 ```yaml
-linux-debian:
+linuxdebian:
   children:
     azure:
     local:
@@ -168,7 +168,7 @@ local-managed-node-001 | CHANGED | rc=0 >>
 Now let's try to run a command on the other group. Run the following command:
 
 ```bash
-ansible -i inventory/inventory.yml linux-debian -m command -a "hostname"
+ansible -i inventory/inventory.yml linuxdebian -m command -a "hostname"
 ```
 
 You should see output similar to the following:
@@ -225,7 +225,7 @@ ansible -i inventory/inventory.yml azure -m ansible.builtin.debug -a "var=http_p
 Now run an ansible command to check the variables on `local` group:
 
 ```bash
-ansible -i inventory/inventory.yml db -m ansible.builtin.debug -a "var=http_port"
+ansible -i inventory/inventory.yml local -m ansible.builtin.debug -a "var=http_port"
 ```
 
 Finally, run an ansible command to check the variables on `all` group:
