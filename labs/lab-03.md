@@ -115,7 +115,7 @@ In case you get an error starting Apache service, create a file named `clean-ngi
 - name: Clean Nginx service
   hosts: all
   become: yes
-  task:
+  tasks:
   - name: Stop nginx
     service:
       name: nginx
