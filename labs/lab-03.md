@@ -265,7 +265,7 @@ The playbook file context at the end should look like this:
 ```yaml
 ---
 - name: Install and configure web server
-  hosts: webserver
+  hosts: local
   tasks:
     - name: Install Apache
       become: true
