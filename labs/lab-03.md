@@ -280,7 +280,7 @@ The playbook file context at the end should look like this:
     - name: Copy index.html
       become: true
       ansible.builtin.copy:
-        src: index.html
+        src: ./static/index.html
         dest: /var/www/html/index.html
     - name: Run smoke test
       ansible.builtin.uri:
