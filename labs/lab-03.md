@@ -108,6 +108,39 @@ PLAY RECAP *********************************************************************
 local-managed-node-001          : ok=3    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
 ```
 
+In case you get an error starting Apache service, create a file named `clean-nginx.yml` with the following content:
+
+```yaml
+---
+- name: Clean Nginx service
+  hosts: all
+  become: yes
+  task:
+  - name: Stop nginx
+    service:
+      name: nginx
+      state: stopped
+ 
+  - name: Remove nginx
+    package:
+      name: nginx
+      state: absent
+```
+
+This playbook will stop and remove the Nginx service from the managed node and allow you to install properly the Apache service.
+
+Run the playbook using the `ansible-playbook` command:
+
+```bash
+ansible-playbook -i inventory/inventory.yml clean-nginx.yml
+```
+
+Then, run the `webserver.yml` playbook again:
+
+```bash
+ansible-playbook -i inventory/inventory.yml webserver.yml
+```
+
 ### Step 4: Test the Web Server
 
 Run the following command to test the web server:
