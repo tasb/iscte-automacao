@@ -269,7 +269,7 @@ The playbook file context at the end should look like this:
   tasks:
     - name: Install Apache
       become: true
-      ansible.builtin.yum:
+      ansible.builtin.apt:
         name: apache2
         state: latest
     - name: Start Apache
