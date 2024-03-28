@@ -35,3 +35,7 @@
         path: /tmp/file.txt
         state: touch
       when: not file_stat.stat.exists
+
+    - name: Print file_stat
+      ansible.builtin.debug:
+        var: file_stat

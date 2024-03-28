@@ -1,9 +1,14 @@
 - name: Create directory
-  file:
+  ansible.builtin.file:
     path: /tmp/static-folder
     state: directory
 
 - name: Create file
-  file:
-    path: /tmp/static-folder/file.txt
+  ansible.builtin.file:
+    path: /tmp/static-folder/file.json
     state: touch
+
+- name: Delete file
+  ansible.builtin.file:
+    path: /tmp/static-folder/file.txt
+    state: absent

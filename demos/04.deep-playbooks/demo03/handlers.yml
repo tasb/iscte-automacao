@@ -6,12 +6,12 @@
     - name: Print a message
       ansible.builtin.debug:
         msg: 'I executed normally'
-      changed_when: true
+      # changed_when: true
       notify:
         - Handler 1
         - Handler 2
     
-    - meta: flush_handlers
+    # - meta: flush_handlers
 
     - name: Task 003
       ansible.builtin.command: "echo 'Task 003'"

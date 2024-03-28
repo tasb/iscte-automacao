@@ -1,5 +1,5 @@
 - name: Using lookup
-  hosts: all
+  hosts: db
   gather_facts: no
   tasks:
     - name: Read services from file

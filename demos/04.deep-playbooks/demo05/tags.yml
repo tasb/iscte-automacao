@@ -1,10 +1,13 @@
 - name: Example Playbook
-  hosts: proxmox
+  hosts: all
   gather_facts: no
   tasks:
     - name: Task 1
       ansible.builtin.debug:
         msg: "This is Task 1"
+      loop:
+        - 1
+        - 2
       tags:
         - task1
         - install
@@ -20,11 +23,10 @@
       ansible.builtin.debug:
         msg: "This is Task 3"
       tags:
-        - always
+        - task3
 
     - name: Task 4
       ansible.builtin.debug:
         msg: "This is Task 4"
       tags:
         - task4
-        - never
