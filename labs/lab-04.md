@@ -134,7 +134,8 @@ Edit the file `full_playbook.yml` and change the `Install Redis` tasks to the fo
   ansible.builtin.apt:
     name: redis-server
     state: present
-  changed_when: redis_installed.rc == 0
+  register: redis_installed
+  changed_when: not redis_installed.failed
   when: ansible_facts['os_family'] == "Debian"
   notify:
     - Start Redis
