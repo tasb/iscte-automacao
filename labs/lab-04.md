@@ -517,6 +517,14 @@ ansible-playbook -i inventory/inventory.yml full_playbook.yml
 
 You should see all the tasks running and not making any change on the server unless on testing tasks.
 
+### Step 7: Use import_playbook on all plays
+
+Now you should use the `import_playbook` module on all plays to import the playbooks `redis.yml`, `postgresql.yml` and `webserver.yml`.
+
+Edit the file `full_playbook.yml` and remove the tasks from the `Install and configure Redis` and `Install and configure PostgreSQL` plays.
+
+Then, add the `import_playbook` module to import the playbooks.
+
 ## Conclusion
 
 On this lab you learned how to create a playbook to install and configure multiple services on different servers.
