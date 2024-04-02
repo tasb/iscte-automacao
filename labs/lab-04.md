@@ -344,6 +344,25 @@ ansible-playbook -i inventory/inventory.yml full_playbook.yml --tags postgresql
 
 On the command above, you're running the playbook and filtering the tasks by the `postgresql` tag.
 
+If you get an error like this:
+
+```bash
+TASK [Test PostgreSQL] ************************************************************************************
+fatal: [local-managed-node-001]: FAILED! => {"msg": "Failed to set permissions on the temporary files Ansible needs to create when becoming an unprivileged user (rc: 1, err: chmod: invalid mode: ‘A+user:postgres:rx:allow’\nTry 'chmod --help' for more information.\n}). For information on working around this, see https://docs.ansible.com/ansible-core/2.16/playbook_guide/playbooks_privilege_escalation.html#risks-of-becoming-an-unprivileged-user"}
+```
+
+This is caused by the `become_user` option on the `Test PostgreSQL` task. This option is used to run the task as the `postgres` user, but the `postgres` user doesn't have the correct permissions to run the `psql` command.
+
+The happen because the package `acl` is no longer installed by default on Ubuntu 20.04+.
+
+Now you need to update your playbook to include the installation of the `acl` package (no step by step provided).
+
+After doing that update, run the playbook again:
+
+```bash
+ansible-playbook -i inventory/inventory.yml full_playbook.yml --tags postgresql
+```
+
 You should run everything without any error.
 
 Now let's run the playbook again:
