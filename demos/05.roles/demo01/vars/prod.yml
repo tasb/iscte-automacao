@@ -1,0 +1,9 @@
+php_memory_limit: "512M"
+php_max_execution_time: "90"
+php_upload_max_filesize: "512M"
+php_packages:
+  - php
+  - php-cli
+  - php-common
+  - php-ssl
+  - php-mysql
