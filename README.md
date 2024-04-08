@@ -33,6 +33,7 @@ The training includes the following lab exercises:
 - [Lab 03 - Author and run your first playbook](labs/lab-03.md)
 - [Lab 04 - Deep dive into Ansible Playbooks](labs/lab-04.md)
 - [Lab 05 - Authoring your first Ansible Role](labs/lab-05.md)
+- [Lab 06 - Create Roles from existing code](labs/lab-06.md)
 
 ## Contributing
 
