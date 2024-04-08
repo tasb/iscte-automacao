@@ -6,3 +6,4 @@
     - role: tasb.nginx
       vars:
         initial_page_path: ./index.html
+        static_files_path: /opt/nginx/static

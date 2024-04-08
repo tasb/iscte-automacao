@@ -1,9 +1,9 @@
 # Author a role
 
-## Bootstrap a role
+## Bootstrap a role on roles path
 
 ```bash
-index
+ansible-galaxy role init tasb-nginx --init-path roles
 ```
 
 ## Review the role structure

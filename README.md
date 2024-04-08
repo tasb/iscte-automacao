@@ -30,6 +30,9 @@ The training includes the following lab exercises:
 
 - [Lab 01 - Introduction to Ansible](labs/lab-01.md)
 - [Lab 02 - Static Inventory with Group Variables](labs/lab-02.md)
+- [Lab 03 - Author and run your first playbook](labs/lab-03.md)
+- [Lab 04 - Deep dive into Ansible Playbooks](labs/lab-04.md)
+- [Lab 05 - Authoring your first Ansible Role](labs/lab-05.md)
 
 ## Contributing
 
