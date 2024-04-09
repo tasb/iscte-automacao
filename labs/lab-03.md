@@ -284,7 +284,7 @@ The playbook file context at the end should look like this:
         dest: /var/www/html/index.html
     - name: Run smoke test
       ansible.builtin.uri:
-        url: http://local-managed-node-001.seg-social.virt
+        url: http://localhost
         return_content: yes
       register: result
     - name: Debug smoke test
