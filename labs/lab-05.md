@@ -268,7 +268,7 @@ The file should have the following content:
 ```yaml
 ---
 - name: Manage users and groups
-  hosts: db
+  hosts: local
   become: true
   roles:
     - role: lab.usersandgroups
