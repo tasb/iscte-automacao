@@ -272,7 +272,6 @@ The file should have the following content:
   become: true
   roles:
     - role: lab.usersandgroups
-      when: ansible_os_family == "RedHat"
   vars:
     users_list:
       - name: adminuser
