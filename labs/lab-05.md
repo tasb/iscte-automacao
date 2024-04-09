@@ -277,7 +277,7 @@ The file should have the following content:
       - name: adminuser
         state: present
         password: "{{ 'password123' | password_hash('sha512') }}"
-        groups: ["wheel"]
+        groups: ["sudo"]
         createhome: yes
         generate_ssh_key: true
         shell: "/bin/bash"
@@ -290,7 +290,7 @@ The file should have the following content:
       - name: devuser
         state: present
         password: "{{ 'password123' | password_hash('sha512') }}"
-        groups: ["wheel", "developers"]
+        groups: ["sudo", "developers"]
         createhome: yes
         generate_ssh_key: true
         shell: "/bin/bash"
