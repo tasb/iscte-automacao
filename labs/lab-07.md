@@ -137,7 +137,7 @@ In case you get an error starting Nginx service, create a file named `clean-apac
 ```yaml
 ---
 - name: Clean Nginx service
-  hosts: all
+  hosts: local
   become: yes
   tasks:
   - name: Stop Apache
