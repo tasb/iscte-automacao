@@ -5,9 +5,9 @@
 - [Objectives](#objectives)
 - [Prerequisites](#prerequisites)
 - [Guide](#guide)
-  - [Step 01: Use template for `redis.conf`](#step-02-use-template-for-redisconf)
-  - [Step 02: Use Ansible Vault to encrypt sensitive data](#step-03-use-ansible-vault-to-encrypt-sensitive-data)
-  - [Step 03: Run the playbook](#step-04-run-the-playbook)
+  - [Step 01: Use template for `redis.conf`](#step-01-use-template-for-redisconf)
+  - [Step 02: Use Ansible Vault to encrypt sensitive data](#step-02-use-ansible-vault-to-encrypt-sensitive-data)
+  - [Step 03: Run the playbook](#step-03-run-the-playbook)
 - [Conclusion](#conclusion)
 
 ## Objectives
