@@ -2,5 +2,5 @@
 - name: Ping windows
   hosts: server
   tasks:
-    - name: Ping widnows server
+    - name: Ping windows server
       ansible.windows.win_ping:
