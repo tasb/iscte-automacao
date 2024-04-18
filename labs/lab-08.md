@@ -43,7 +43,7 @@ On the `lab.redis` role, you should have a task with the following content:
 
 This is a great opportunity to use a template instead of regex replace.
 
-Create a template file named `redis.conf.j2` inside `templates` folder with the content of this file: [redis.conf](https://raw.githubusercontent.com/tasb/ansible-training/main/labs/lab07/redis.conf).
+Create a template file named `redis.conf.j2` inside `templates` folder with the content of this file: [redis.conf](https://raw.githubusercontent.com/tasb/iscte-automacao/main/labs/lab08/redis.conf).
 
 Find the line with the `# requirepass foobared` and replace it with `requirepass {{ redis_password }}`.
 
