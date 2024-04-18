@@ -76,6 +76,7 @@ Create a new inventory file named `inventory.yml` with the following content:
 ```yaml
 windows:
   hosts:
+    windows-server:
       ansible_host: <WINDOWS_IP>
 ```
 
