@@ -34,6 +34,10 @@ The training includes the following lab exercises:
 - [Lab 04 - Deep dive into Ansible Playbooks](labs/lab-04.md)
 - [Lab 05 - Authoring your first Ansible Role](labs/lab-05.md)
 - [Lab 06 - Create Roles from existing code](labs/lab-06.md)
+- [Lab 07 - Using Templates with Jinja2](labs/lab-07.md)
+- [Lab 08 - Using Ansible Vault and create a complex scenario](labs/lab-08.md)
+- [Lab 09 - Manage Windows hosts with Ansible](labs/lab-09.md)
+- [Lab 10 - Start using your repo](labs/lab-10.md)
 
 ## Contributing
 
